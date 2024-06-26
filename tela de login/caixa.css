@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    color: #fff;
+    background-color: #333;
+
+    display: grid;
+    grid-template-rows: 10% 1fr 10%;
+    grid-template-columns: 6% 1fr 15%;
+    grid-auto-rows: 400px;
+    gap: 2px;
+
+    align-items: stretch;
+    justify-items: stretch;
+
+    grid-template-areas: 
+        "left header header"
+        "left main main"
+        "left footer footer"
+    ;
+}
+
+header {
+    background-image: linear-gradient(to left, #3b0801, #b31800 );
+    grid-area: header;
+    font-size: 30px;
+    color: #e8e1d4;
+
+    text-align: center;
+    padding-left: 55px;
+}
+
+main {
+    /*background-color: #7b7fac;*/
+    grid-area: main;
+    color: #141313;
+    font-size: 50px;
+    text-align: left;
+    
+    background-color: #e8e1d4;
+    
+    background-size: cover;
+    background-repeat: no-repeat; /* n vai repetir a imagem por algum motivo desconhecido igual tava rolando antes*/ 
+    background-position: center center;
+
+    display: grid;
+    grid-template-columns: 1fr 25%;
+    grid-template-rows: 20% 1fr;
+    gap: 2px; 
+    padding: 10px;
+
+    grid-auto-rows: 300px;
+
+    align-items: stretch;
+    justify-items: stretch;
+
+    grid-template-areas: 
+        "grupo caixa"
+        "produtos caixa"
+    ;
+}
+
+
+aside#left {
+    background-color:  #e8e1d4;
+    grid-area: left;
+    color: #b31800;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 20% 20% 20%; 
+
+
+    grid-auto-rows: 300px;
+
+    align-items: stretch;
+    justify-items: stretch;
+
+    grid-template-areas: 
+        "opc1"
+        "opc2"
+        "opc3"
+        "opc4"
+    ;
+}
+
+.opc-caixa img {
+    grid-area: opc1;
+    max-width: 85px;
+    height: auto;
+    margin-left: 25px;
+    margin-top: 100px;
+}
+
+
+
+.opc-menu img {
+    grid-area: opc2;
+    max-width: 90px;
+    height: auto;
+    margin-left: 25px;
+    margin-top: 87px;
+}
+
+
+.opc-mesas img {
+    grid-area: opc3;
+    max-width: 135px;
+    height: auto;
+    margin-top: 39px; 
+}
+
+
+.opc-historico img {
+    grid-area: opc4;
+    max-width: 90px;
+    height: auto;
+    margin-left: 25px;
+    margin-top: 60px;
+}
+
+
+
+.grupo {
+    background-image: linear-gradient(to left, #3b0801, #b31800 );
+    grid-area: grupo;
+
+    display: grid;
+    grid-template-columns: 19% 19% 19% 19% 19% ;
+    grid-template-rows: 69%;
+    gap: 10px; 
+    padding-top: 28px;
+    padding-left: 13px;
+    padding-right: 1px;
+
+    grid-auto-rows: 50px;
+
+    align-items: stretch;
+    justify-items: stretch;
+
+    grid-template-areas: 
+        "item1 item2 item3 item4 item5"
+    ;
+}
+
+.item1 {
+    grid-area: item1;
+    background-color: #e8e1d4;
+    border-radius: 5px;
+    text-align: center;
+    color: #141313;
+    font-size: 42px;
+}
+
+
+.Opções-botão {
+    width: 100%;
+    height: 100%;
+    font-size: 35px;
+    background-color: #e8e1d4;
+    cursor: pointer;
+}
+
+.Opções-botão:hover {
+    background-image: linear-gradient(to top, #e8e1d4,  rgb(255, 115, 50));
+}
+
+.item2 {
+    grid-area: item2;
+    background-color: #e8e1d4;
+    border-radius: 5px;
+    text-align: center;
+    color: #141313;
+    font-size: 42px;
+}
+
+.item3 {
+    grid-area: item3;
+    background-color: #e8e1d4;
+    border-radius: 5px;
+    text-align: center;
+    color: #141313;
+    font-size: 42px;
+}
+
+.item4 {
+    grid-area: item4;
+    background-color: #e8e1d4;
+    border-radius: 5px;
+    text-align: center;
+    color: #141313;
+    font-size: 42px;
+}
+
+.item5 {
+    grid-area: item5;
+    background-color: #e8e1d4;
+    border-radius: 5px;
+    text-align: center;
+    color: #141313;
+    font-size: 42px;
+}
+
+.produtos {
+    background-image: linear-gradient(to left, #3b0801, #b31800 );
+    grid-area: produtos;
+
+}
+
+.caixa {
+    background-color: #3b0801;
+    grid-area: caixa;
+
+    
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% 1fr 20% 15%;
+    gap: 5px; 
+    padding: 10px;
+
+    grid-auto-rows: 300px;
+
+    align-items: stretch;
+    justify-items: stretch;
+
+    grid-template-areas: 
+       "codigo quantidade"
+       "lista lista"
+       "valor valor"
+       "cancelar confirmar"
+    ;
+}
+
+.codigo {
+    background-color: #e8e1d4;
+    grid-area: codigo;
+    font-size: 20px;
+}
+
+.codigo input {
+    width: 100%;
+    height: 100%;
+    padding: 13px;
+    font-size: 21px;
+    box-sizing: border-box;
+}
+
+
+
+.quantidade {
+    background-color: #e8e1d4;
+    grid-area: quantidade;
+    font-size: 30px;
+}
+
+.quantidade input {
+    width: 100%;
+    height: 100%;
+    padding: 13px;
+    font-size: 21px;
+    box-sizing: border-box;
+}
+
+.lista {
+    background-color: #ffffff;
+    grid-area: lista;
+    font-size: 30px;
+}
+
+.valor {
+    background-color: #ffffff;
+    grid-area: valor;
+    font-size: 30px;
+}
+
+.cancelar {
+    background-color: #ffffff;
+    grid-area: cancelar;
+    font-size: 30px;
+}
+
+.cancelar button {
+    background-image: linear-gradient(to top, #e8e1d4,  rgb(255, 255, 255));
+    width: 100%;
+    height: 100%;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.cancelar button:hover {
+    background-image: linear-gradient(to top, #d05959,  rgb(135, 2, 2));
+}
+
+.confirmar {
+    background-color: #e8e1d4;
+    grid-area: confirmar;
+    font-size: 30px;
+}
+
+.confirmar button {
+    background-image: linear-gradient(to top, #e8e1d4,  rgb(255, 255, 255));
+    width: 100%;
+    height: 100%;
+    font-size: 35px;
+    cursor: pointer;
+
+}
+
+.confirmar button:hover {
+    background-image: linear-gradient(to top, #59d087,  rgb(2, 135, 40));
+}
+
+footer {
+    background-color: #333;
+    grid-area: footer;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: larger;
+    padding-top: 2%;
+}
